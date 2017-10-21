@@ -1,4 +1,59 @@
+@font-face {
+    font-family: RobotoSlab;
+    src: url("./components/fonts/RobotoSlab-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: RobotoSlab;
+    src: url("./components/fonts/RobotoSlab-Light.ttf");
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: RobotoSlab;
+    src: url("./components/fonts/RobotoSlab-Regular.ttf");
+}
+
+@font-face {
+    font-family: RobotoCondensed;
+    src: url("./components/fonts/RobotoCondensed-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: RobotoCondensed;
+    src: url("./components/fonts/RobotoCondensed-Light.ttf");
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: RobotoCondensed;
+    src: url("./components/fonts/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+    font-family: iCiel Crocante;
+    src: url("./components/fonts/iCiel Crocante.otf")
+}
+
+@font-face {
+    font-family: fontawesome;
+    src: url("./components/fonts/fontawesome-webfont.ttf")
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./components/fonts/OpenSans-Regular.ttf")
+}
+
+* {
+    font-family: "Open Sans";
+}
+
 html {
+    padding: 0;
+    margin: 0;
     width: 100%;
     height: 100%;
     text-decoration-style: none;
@@ -41,12 +96,253 @@ html {
 /* CONTENT */
 /* ////////////////// MAINPAGE'S WIDGET */
 .widget-header {
-    margin: 15px;
-    padding: 10px;
-    border: 1px solid #fff275;
-    background: #6699cc;
-    color: #de4e4f;
-    font-size: 1.5em;
+    position: relative;
+    padding: 20px 0;
+    color: #393E41;
+    font-size: 1.75em;
     font-weight: bold;
     box-sizing: border-box;
+    font-family: 'RobotoSlab';
+    width: 100%;
 }
+.widget-body {
+    width: 100%;
+    
+}
+.widget-header:before {
+    content: "\00a0";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 50%;
+    max-width: 100px;
+    border-bottom: 3px solid rgba(57, 62, 65, .5);
+    transition: all .2s ease-in-out;
+}
+
+.widget-header:hover:before {
+    width: 80%;
+    max-width: 160px;
+}
+
+.widget-lastest-item {
+    display: block;
+    margin: 20px 10px;;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,1);
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 0px 5px black;
+}
+
+.img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    padding: 0 !important;
+}
+.img-wrapper img {
+    width: 100%;
+}
+
+
+.widget-lastest-item .descr-wrapper {
+    padding: 15px 5px;
+    transition: all .5s ease;
+    height: 0;
+    overflow: hidden;
+    background: #8E9EAB;
+    padding: 0;
+}
+.widget-lastest-item .descr-wrapper::before {
+    content: "\f078";
+    width: 100%;
+    position: relative;
+    font-family: fontawesome;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.widget-lastest-item .small-title {
+    font-family: "RobotoCondensed";
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+}
+.title-wrapper {
+    background: #8E9EAB;
+    color: 343434;
+    border-radius: 5px 5px 0 0;
+}
+.info-wrapper {
+    display: flex;
+    padding: 0!important;
+    padding-top: 10px;
+    text-align: right;
+    flex-wrap: wrap;
+}
+
+.info-wrapper>div {
+    width: 100%
+}
+
+.info-wrapper span:not(.more){
+    padding-right: .25em;
+    float: right;
+}
+
+.info-wrapper .row>div {
+    padding: 5px 0;
+    float: left;
+}
+
+.widget-lastest-item .views::before {
+    content: "\f06e";
+    font-family: "fontawesome";
+}
+
+.widget-lastest-item .rating::before {
+    content: "\f132";
+    font-family: "fontawesome";
+}
+
+.widget-lastest-item .mess::before {
+    content: "\f086";
+    font-family: "fontawesome";
+}
+
+.widget-lastest-item .more {
+    text-align: center;
+    font-size: 1.2em;
+    width: 100%;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    /* transition: all .75s ease; */
+    margin: auto;
+    /* transition-delay: .4s; */
+}
+.more-wrapper {
+    width: 100%;
+    background: rgb(220, 220, 220, .5);
+    padding: 5px 0;
+}
+
+.more-wrapper:hover {
+    cursor: pointer;
+}
+
+/* .widget-lastest-item .more-wrapper:hover .more { */
+    /* width: 100%; */
+    /* transition-delay: 0; */
+/* } */
+
+.widget-lastest-item .more::before {
+    content: "\f078";
+    margin-right: 5px;
+    font-family: "fontawesome";
+}
+
+
+/* Footer */
+#footer {
+    width: 100%;
+    position: relative;
+    background: #111;
+    color: #777;
+    padding: 0;
+    margin: 0;
+    max-width: none;
+}
+.middle-wrapper {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 0; bottom: 0; left: 0; right: 0;
+    padding: 10px 0;
+}
+
+#right-footer-menu {
+    display: block;
+    width: 50%;
+    border: 1px solid red;
+    margin: 0;
+    text-align: right;
+    height: 100%;
+}
+
+#right-footer-menu span {
+    font-size: 1.1em;
+}
+
+.nav-foot-menu {
+    display: inline-block;
+    padding: 5px;
+}
+
+/* Click FX */
+  button {
+    border: none;
+    cursor: pointer;
+    background: none;
+  }
+  
+  /* Ripple magic */
+  .button, .button2{
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, .3);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+  }
+
+  .button2:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(220, 220, 220,.6);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 1;
+    }
+    20% {
+      transform: scale(25, 25);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(40, 40);
+    }
+  }
+  
+  .button:focus:not(:active)::after, .button2:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+  }
+
+  /* Pop */
+  #popover-positioned-bottom {
+      z-index: 100
+  }

@@ -9,7 +9,6 @@ export default class Header extends Component {
 
     render() {
         const menus = [
-            "Mainpage",
             "Projects",
             "Schedule",
             "Membership",
