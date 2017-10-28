@@ -47,6 +47,11 @@
     src: url("./components/fonts/OpenSans-Regular.ttf")
 }
 
+@font-face {
+    font-family: "Droid Serif";
+    src: url("./components/fonts/DroidSerif-Regular.ttf")
+}
+
 * {
     font-family: "Open Sans";
 }
@@ -65,22 +70,99 @@ html {
     width: 100%;
     height: 60px;
     background-color: white;
-    display: flex;
     border-bottom: 2px solid #de4e4f;
     position: relative;
 }
 
+#header-wrapper {
+    display: flex;
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin: auto;    
+}
+
+#logo-wrapper {
+    height: 100%;
+    width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#logo {
+    background: #dcdcdc;
+    height: 40px;
+    width: 40px;
+    margin: 10px 5px 10px 15px;
+}
+
+#logo-wrapper span {
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: "Droid Serif";
+    height: 100%;
+    line-height: 100%;
+    padding-top: 20px;
+}
+
 .nav-menu {
     color: black;
-    padding: 5px;
+    padding: 5px 10px;
     margin: auto 0;
-    font-family: Tahoma;
+    font-family: "RobotoCondensed";
+    font-size: 1.5em;
 }
 
 .nav-menu:hover {
     color: #de4e4f;
     transition: all .5s; 
     cursor: pointer;
+}
+
+.search-bar-wrapper {
+    position: relative;
+    height: 40px;
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 40%;
+}
+.search-bar {
+    width: 80%;
+    height: 100%;
+    margin-left: 15px;
+    font-size: 1.25em;
+    border-radius: 5px;
+    transition: .25s all ease;
+    border: 2px solid #dcdcdc;
+    padding-left: 5px;
+    float: right;
+}
+.search-bar:focus {
+    border: 1px solid rgba(222, 78, 79);    
+    box-shadow: 0 0 1px #de4e4f;
+}
+.auth-wrapper {
+    height: 30px;
+    width: 30%;
+    margin: auto 5px;    
+    padding-left: 10px;
+}
+
+.auth-menu {
+    position: relative;
+    height: 30px;
+    margin: auto 5px;    
+    background: rgba(142, 158, 171, .5);
+    width: 60px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 1.25em;
+    font-family: RobotoCondensed;
+    vertical-align: middle;
+    border-radius: 5px;
+    display: inline-block;
 }
 /* /////////////BANNER */
 .main-banner {
@@ -95,6 +177,12 @@ html {
 
 /* CONTENT */
 /* ////////////////// MAINPAGE'S WIDGET */
+.main-content {
+    width: 100%;
+    height: 100%;
+    padding: 30px 15px 50px 15px;
+}
+
 .widget-header {
     position: relative;
     padding: 20px 0;
@@ -102,7 +190,7 @@ html {
     font-size: 1.75em;
     font-weight: bold;
     box-sizing: border-box;
-    font-family: 'RobotoSlab';
+    font-family: 'RobotoCondensed';
     width: 100%;
 }
 .widget-body {
@@ -252,10 +340,23 @@ html {
     position: relative;
     background: #111;
     color: #777;
-    padding: 0;
+    padding:0;
     margin: 0;
     max-width: none;
 }
+.footer-page-info {
+    background: #696969;
+    height: 200px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-page-nav {
+    padding: 0;
+    margin: 0;
+}
+
 .middle-wrapper {
     display: block;
     margin: 0 auto;
@@ -266,11 +367,30 @@ html {
 
 #right-footer-menu {
     display: block;
-    width: 50%;
-    border: 1px solid red;
     margin: 0;
     text-align: right;
     height: 100%;
+    box-sizing: border-box;    
+}
+#left-footer-menu {
+    display: block;
+    margin: 0;
+    text-align: left;
+    height: 100%;
+    padding: 30px 0 30px 30px;
+    box-sizing: border-box;
+}
+
+.contributor-list {
+    display: flex;
+    width: 100%;
+}
+.contributor-list div {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 1vw;
+    background: #777;
+    margin: 5px;
 }
 
 #right-footer-menu span {

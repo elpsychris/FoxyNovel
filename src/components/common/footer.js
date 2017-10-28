@@ -14,17 +14,29 @@ export default class Footer extends Component {
 
         return (
             <div id="footer" className="container">
-                <div id="left-footer-menu" className="col-sm-8">
-                    
+                <div className="row footer-page-info">
+
                 </div>
-                <div id="right-footer-menu" className="col-sm-4">
-                    <div className="middle-wrapper">
-                        {menuDOM}
-                        <br/>
-                        <span>
-                            2017 © Foxy.io, Ltd. All Rights FoxyTeam Reserved.<br/>
-                            Hosted by VPSPro
-                        </span>
+                <div className="row footer-page-nav">
+                    <div id="left-footer-menu" className="col-sm-8">
+                        <p>Contributors:</p>
+                        <div className="contributor-list">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="right-footer-menu" className="col-sm-4">
+                        <div className="middle-wrapper">
+                            {menuDOM}
+                            <br/>
+                            <p>
+                                2017 © Foxy.io, Ltd. All Rights FoxyTeam Reserved.</p>
+                            <p>
+                                Hosted by VPSPro
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
