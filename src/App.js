@@ -3,19 +3,15 @@ import logo from './logo.svg';
 import Header from './components/common/header'
 import Footer from './components/common/footer'
 import Content from './components/common/content'
-
+import View from './components/views'
 import './App.css';
 
+const App = () => ([
+  < Header />, 
+  < Content />,
+  < Footer />
+])
 
-class App extends Component {
-  render() {
-    return ([
-      // <!-- Latest compiled and minified CSS -->
-      < Header />, 
-      < Content />,
-      <Footer/>
-    ])
-  }
-}
 
-export default App;
+
+export default App

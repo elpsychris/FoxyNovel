@@ -10,6 +10,11 @@ export default class ImageInfoBox extends Component {
                     <li><b>Views: </b>1000</li>
                     <li><b>Rating: </b>4.0</li>
                 </div> */}
+                <div className="mask">
+                    <div>
+                        <p>{this.props.quote}</p>
+                    </div>
+                </div>
             </div>
         )
     }

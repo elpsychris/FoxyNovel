@@ -1,9 +1,15 @@
 import React from 'react'
 import ImageInfoBox from '../common/imageInfoBox'
 import {OverlayTrigger, Popover} from 'react-bootstrap'
+import {Link} from 'react-router-dom'
+
 const ava = require('../images/rezeroIco.png')
 
-const sample_descr = "dolor sit amet, consectetur adipiscing elit.tincidunt quis erat ullamcorper blan" +
+const sample_descr = "Dolor sit amet, consectetur adipiscing elit.tincidunt quis erat ullamcorper blan" +
+        "dit. Etiam eu metus nunc.Duis tortor felis,posuere eu tellus sit amet, convallis" +
+        " lobortisenim. Aliquam luctus sem at quam venenatis, quis pulvinar arcu consequa" +
+        "t."
+const sample_quote = "Dolor sit amet, consectetur adipiscing elit.tincidunt quis erat ullamcorper blan" +
         "dit. Etiam eu metus nunc.Duis tortor felis,posuere eu tellus sit amet, convallis" +
         " lobortisenim. Aliquam luctus sem at quam venenatis, quis pulvinar arcu consequa" +
         "t."
@@ -15,7 +21,6 @@ export default class WidgetLatestPJ extends React.Component {
     constructor(props) {
         super(props)
 
-        
     }
     render() {
         const popoverBottom = (data) => {
@@ -26,6 +31,7 @@ export default class WidgetLatestPJ extends React.Component {
             )
         }
         return (
+
             <div className="col-sm-4">
                 <div className="widget-header">LASTEST</div>
                 <div className="widget-body">
@@ -37,7 +43,7 @@ export default class WidgetLatestPJ extends React.Component {
                                     {sample_title}
                                 </div>
                             </div>
-                            <ImageInfoBox imgUrl={ava} class="col-sm-12 img-wrapper"/>
+                            <ImageInfoBox imgUrl={ava} class="col-sm-12 img-wrapper" quote={sample_quote}/>
                             <div className="col-sm-12 info-wrapper">
                                 <div className="container">
                                     <div className="row">
@@ -67,6 +73,7 @@ export default class WidgetLatestPJ extends React.Component {
                             <span className="small-descr">{sample_descr}</span>
                         </div>
                     </div>
+
                 </div>
             </div>
         )

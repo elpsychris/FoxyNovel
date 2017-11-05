@@ -144,7 +144,7 @@ html {
     box-shadow: 0 0 1px #de4e4f;
 }
 .auth-wrapper {
-    height: 30px;
+    height: 40px;
     width: 30%;
     margin: auto 5px;    
     padding-left: 10px;
@@ -152,17 +152,36 @@ html {
 
 .auth-menu {
     position: relative;
-    height: 30px;
+    height: 40px;
     margin: auto 5px;    
-    background: rgba(142, 158, 171, .5);
-    width: 60px;
-    line-height: 30px;
+    width: 70px;
+    line-height: 40px;
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.5em;
     font-family: RobotoCondensed;
     vertical-align: middle;
     border-radius: 5px;
     display: inline-block;
+    transition: .5s all ease;    
+}
+
+.auth-menu:nth-child(1) {
+    background: rgba(142, 158, 171, .5);    
+}
+.auth-menu:nth-child(1) {
+    background: #F49D37;    
+}
+.auth-menu:nth-child(2) {
+    background: #3f88c5;   
+    color: white; 
+}
+
+
+
+.auth-menu:hover {
+    background: #de4e4f;
+    cursor: pointer;
+    color: white;    
 }
 /* /////////////BANNER */
 .main-banner {
@@ -183,6 +202,10 @@ html {
     padding: 30px 15px 50px 15px;
 }
 
+.widget-lastest-item:hover {
+    cursor: pointer;
+}
+
 .widget-header {
     position: relative;
     padding: 20px 0;
@@ -195,7 +218,6 @@ html {
 }
 .widget-body {
     width: 100%;
-    
 }
 .widget-header:before {
     content: "\00a0";
@@ -229,11 +251,49 @@ html {
     height: 150px;
     overflow: hidden;
     padding: 0 !important;
+    overflow: hidden;
 }
 .img-wrapper img {
     width: 100%;
+    position: absolute;
+}
+.img-wrapper:hover .mask {
+    bottom: 0;
+    height: 100%;    
 }
 
+.img-wrapper .mask {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, .6);
+    color: white;
+    font-size: 1.25em;
+    overflow: hidden;
+    transition: all .5s ease;   
+    bottom: 100%;     
+}
+.img-wrapper .mask:before {
+    content: '\f10d';
+    font-family: fontawesome;
+    font-size: 3em;
+    position: absolute;
+    color: rgba(255, 255, 255, .3);
+    left: 20px;
+}
+
+.mask div {
+    position: relative;
+    height: 100%;
+    margin-top: 50px;    
+}
+
+.mask p {
+    position: relative;
+    text-indent: 2em;
+    max-height: 100%;
+    padding-left: 20px;
+}
 
 .widget-lastest-item .descr-wrapper {
     padding: 15px 5px;
@@ -260,7 +320,7 @@ html {
     text-align: center;
 }
 .title-wrapper {
-    background: #8E9EAB;
+    background: #dcdcdc;
     color: 343434;
     border-radius: 5px 5px 0 0;
 }
@@ -276,6 +336,10 @@ html {
     width: 100%
 }
 
+.info-wrapper button {
+    font-size: 1.25em;
+}
+
 .info-wrapper span:not(.more){
     padding-right: .25em;
     float: right;
@@ -289,16 +353,19 @@ html {
 .widget-lastest-item .views::before {
     content: "\f06e";
     font-family: "fontawesome";
+    margin-right: 5px;
 }
 
 .widget-lastest-item .rating::before {
     content: "\f132";
     font-family: "fontawesome";
+    margin-right: 5px;    
 }
 
 .widget-lastest-item .mess::before {
     content: "\f086";
     font-family: "fontawesome";
+    margin-right: 5px;    
 }
 
 .widget-lastest-item .more {
