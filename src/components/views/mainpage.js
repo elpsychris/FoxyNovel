@@ -4,7 +4,9 @@ import WidgetLatestPJ from '../widgets/latestPJ'
 
 export default class MainPage extends React.Component {
     render() {
-        return (
+        return [
+            <div className="main-banner"></div>,
+
             <div className="main-content container-fluid">
                 <div className="row">
                     {< WidgetLatestPJ />}
@@ -12,6 +14,6 @@ export default class MainPage extends React.Component {
                     {< WidgetLatestPJ />}
                 </div>
             </div>
-        )
+        ]
     }
 }

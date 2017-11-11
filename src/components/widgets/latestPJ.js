@@ -31,43 +31,44 @@ export default class WidgetLatestPJ extends React.Component {
             )
         }
         return (
-
             <div className="col-sm-4">
                 <div className="widget-header">LASTEST</div>
                 <div className="widget-body">
 
                     <div className="container widget-lastest-item">
                         <div className="row">
-                            <div className="col-sm-12 title-wrapper">
-                                <div className="small-title">
-                                    {sample_title}
-                                </div>
-                            </div>
-                            <ImageInfoBox imgUrl={ava} class="col-sm-12 img-wrapper" quote={sample_quote}/>
-                            <div className="col-sm-12 info-wrapper">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col-md-12 col-lg-8 push-lg-4 ">
-                                            <button className="button2 views">
-                                                300</button>
-                                            <button className="button2 rating">
-                                                4.6</button>
-                                            <button className="button2 mess">
-                                                15</button>
-                                        </div>
-                                        <OverlayTrigger
-                                            trigger="click"
-                                            placement="bottom"
-                                            overlay={popoverBottom(sample_descr)}>
-                                            <button className="col-md-12 col-lg-4 pull-lg-8 more-wrapper button">
-                                                <span
-                                                    onClick={((e) => this.btnClickHandler(e)).bind(this)}
-                                                    ref={e => this.moreBtn = e}className="button more">Giới thiệu</span>
-                                            </button>
-                                        </OverlayTrigger>
+                            <Link to={'Projects'}>
+                                <div className="col-sm-12 title-wrapper">
+                                    <div className="small-title">
+                                        {sample_title}
                                     </div>
                                 </div>
-                            </div>
+                                <ImageInfoBox imgUrl={ava} class="col-sm-12 img-wrapper" quote={sample_quote}/>
+                                <div className="col-sm-12 info-wrapper">
+                                    <div className="container">
+                                        <div className="row">
+                                            <div className="col-md-12 col-lg-8 push-lg-4 ">
+                                                <button className="button2 views">
+                                                    300</button>
+                                                <button className="button2 rating">
+                                                    4.6</button>
+                                                <button className="button2 mess">
+                                                    15</button>
+                                            </div>
+                                            <OverlayTrigger
+                                                trigger="click"
+                                                placement="bottom"
+                                                overlay={popoverBottom(sample_descr)}>
+                                                <button className="col-md-12 col-lg-4 pull-lg-8 more-wrapper button">
+                                                    <span
+                                                        onClick={((e) => this.btnClickHandler(e)).bind(this)}
+                                                        ref={e => this.moreBtn = e}className="button more">Giới thiệu</span>
+                                                </button>
+                                            </OverlayTrigger>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
                         </div>
                         <div className="row descr-wrapper">
                             <span className="small-descr">{sample_descr}</span>

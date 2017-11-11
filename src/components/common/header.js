@@ -1,5 +1,6 @@
 import React , { Component } from 'react'
 import SearchBar from './searchbar'
+import { Link } from 'react-router-dom'
 
 export default class Header extends Component {
     constructor() {
@@ -10,7 +11,7 @@ export default class Header extends Component {
 
     render() {
         const MENUS = [
-            "Projects",
+            <Link to='Projects'>{'Projects'}</Link>,
             "Publish",
             "Membership" 
         ]
@@ -33,7 +34,7 @@ export default class Header extends Component {
                 <div id="header-wrapper">
                     <div id="logo-wrapper">
                         <div id="logo"/>
-                        <span>Foxy.io</span>
+                        <span><Link to=''>{'Foxy.io'}</Link></span>
                     </div>
                     {MENU_DOM}
                     <SearchBar />
@@ -42,7 +43,6 @@ export default class Header extends Component {
                     </div>
                 </div>
             </div>,
-            <div className="main-banner"></div>
         ])
 
     }
