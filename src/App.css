@@ -607,15 +607,84 @@ a:hover {
       border-style: none;
   }
 
+  .cur-user {
+      background: #de4e4f;
+      font-size: 1.3em;
+      color: white;
+      font-weight: bold;
+      padding: 5px;
+      display: flex;
+  }
+
+  .cur-user .hide-chat {
+      width: 50px;
+      height: 50px;
+      transition: 0.05s ease-in-out all;
+  }
+  
+
+  .cur-user:active .hide-chat{
+      transform: scale(1.2);
+  }
+
+  .cur-user .hide-chat::after {
+      content: "\f105";
+      font-family: 'fontawesome';
+      color: white;
+      font-size: 2em;
+      line-height: 50px;
+      vertical-align: middle;
+      
+  }
+
+  .cur-user > .user-chat-info > .user-ava {
+      border: 2px solid white;
+  }
+
   .user-chat-info {
       width: 100%;
+      display: flex;
+      padding: 5px 5px 5px 20px;
+  }
+
+  .cur-user>.user-chat-info {
+      padding: 5px;
+  }
+
+  .online > .user-ava {
+      border: 2px solid #8fc951;
+  }
+  .offline > .user-ava {
+      border: 2px solid rgba(220, 220, 220, 1);
+  }
+
+  .offline > .user-name {
+      color: rgba(51, 51, 51, .2);
   }
 
   .user-chat-info .user-ava {
       height: 40px;
       width: 40px;
       border-radius: 20px;
-      background: white;
+      background: #de4e4f;
+      flex-grow: 0;
+  }
+  .user-chat-info .user-name {
+      height: 40px;
+      line-height: 40px;
+      font-size: 1.25em;
+      padding-left: .5em;
+  }
+
+  .sub-widget span {
+      color: #777;
+      display: block;
+      text-align: right;
+      padding: 5px 5px 0 5px;
+      margin-left: 25px;
+      border-bottom: 1px solid rgba(220, 220, 220, .5);
+      font-size: .9em;
+      font-style: italic;
   }
 
   /* Project Info */
