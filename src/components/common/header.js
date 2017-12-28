@@ -10,6 +10,7 @@ export default class Header extends Component {
 
 
     render() {
+        const isAuthenticated = true;
         const MENUS = [
             <Link to='Projects'>{'Projects'}</Link>,
             "Publish",
@@ -29,17 +30,19 @@ export default class Header extends Component {
             return <div className="auth-menu">{auth}</div>
         } )
 
+        const SETTING_DOM = <div className="setting"></div>
+
         return ([
             <div id="header">
                 <div id="header-wrapper">
                     <div id="logo-wrapper">
                         <div id="logo"/>
-                        <span><Link to=''>{'Foxy.io'}</Link></span>
+                        <span><Link to=''>Foxy.io</Link></span>
                     </div>
                     {MENU_DOM}
                     <SearchBar />
                     <div className="auth-wrapper">
-                        {AUTH_DOM}
+                            {isAuthenticated?SETTING_DOM:AUTH_DOM}
                     </div>
                 </div>
             </div>,

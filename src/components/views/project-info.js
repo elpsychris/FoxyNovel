@@ -1,7 +1,8 @@
 import React from "react"
 import ImageInfoBox from "../common/imageInfoBox";
+import ProjectMiniPanel from "../widgets/ProjectMiniPanel";
 
-const ava = require('../images/rezeroIco.png')
+const ava = require('../images/bg3.jpg')
 const sample_name = "Dolor sit amet, consectetur adipiscing elit.tincidunt quis erat ullamcorper blan" +
         "dit. Etiam eu metus nunc.Duis tortor felis,posuere eu tellus sit amet, convallis"
 const sample_author = "Dolor sit. Amet"
@@ -28,7 +29,8 @@ export default class ProjectInfo extends React.Component {
             <div className="project-info">
                 <div className="project-header">
                     <div className="project-info-attr project-ava">
-                        <ImageInfoBox imgUrl={ava}></ImageInfoBox>
+                        {this.renderProjectBanner(ava)}
+                        <ProjectMiniPanel/>                    
                     </div>
                     <div className="project-info-attr project-name">{sample_name}</div>
                     <div className="project-info-attr project-author">{sample_author}</div>
@@ -43,12 +45,20 @@ export default class ProjectInfo extends React.Component {
                             </div>
                             <div className="volume-chapters">
                                 {volume.chapters.map(chapter => (
-                                    <div className="chapter"></div>
+                                    <div className="chapter">{chapter}</div>
                                 ))}
                             </div>
                         </div>
                     ))}
                 </div>
+            </div>
+        )
+    }
+
+    renderProjectBanner(bannerUrl) {
+        return (
+            <div className="project-banner">
+                <img src={bannerUrl}/>
             </div>
         )
     }

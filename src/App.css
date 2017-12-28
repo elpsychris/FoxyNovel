@@ -54,6 +54,7 @@
 
 * {
     font-family: "Open Sans";
+    font-size: 16px;
 }
 
 html {
@@ -63,6 +64,7 @@ html {
     height: 100%;
     text-decoration-style: none;
     min-height: 100%;
+    color: #333;
 }
 
 /* HEADER */
@@ -112,7 +114,7 @@ html {
     padding: 5px 10px;
     margin: auto 0;
     font-family: "RobotoCondensed";
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .nav-menu:hover {
@@ -124,7 +126,7 @@ html {
 .search-bar-wrapper {
     position: relative;
     height: 40px;
-    font-size: 1.2em;
+    font-size: 1em;
     margin-top: 10px;
     margin-left: 15px;
     width: 40%;
@@ -133,7 +135,7 @@ html {
     width: 80%;
     height: 100%;
     margin-left: 15px;
-    font-size: 1.25em;
+    font-size: 1em;
     border-radius: 5px;
     transition: .25s all ease;
     border: 2px solid #dcdcdc;
@@ -158,7 +160,7 @@ html {
     width: 70px;
     line-height: 40px;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.1em;
     font-family: RobotoCondensed;
     vertical-align: middle;
     border-radius: 5px;
@@ -184,6 +186,36 @@ html {
     cursor: pointer;
     color: white;    
 }
+.setting {
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    transition: .1s all ease-in-out;
+    position: absolute;
+    right: 0;
+    transition: .05s all ease-in-out;    
+}
+.setting::after {
+    content: '\f0c9';
+    font-family: 'fontawesome';
+    color: #fff;
+    background: #de4e4f;    
+    text-align: center;
+    font-size: 1.5em;
+    display: block;
+    line-height: 40px;
+    height: 100%;
+    width: 100%;
+    margin: auto 5px;    
+    position: absolute;
+    right: 0;
+}
+.setting:hover::after {
+    cursor: pointer;
+}
+.setting:hover:active {
+    transform: scale(1.2);
+}
 /* /////////////BANNER */
 .main-banner {
     width: 100%;
@@ -198,6 +230,11 @@ html {
 /* CONTENT */
 /* ////////////////// MAINPAGE'S WIDGET */
 /* React Router Link */
+body {
+    background-repeat: repeat;
+    background-color: white;
+    background-size: 10px 10px;
+}
 a {
     width: 100%;
     color: black;
@@ -221,7 +258,7 @@ a:hover {
     position: relative;
     padding: 20px 0;
     color: #393E41;
-    font-size: 1.75em;
+    font-size: 1.5em;
     font-weight: bold;
     box-sizing: border-box;
     font-family: 'RobotoCondensed';
@@ -279,7 +316,7 @@ a:hover {
     height: 0;
     background: rgba(0, 0, 0, .6);
     color: white;
-    font-size: 1.25em;
+    font-size: 1em;
     overflow: hidden;
     transition: all .5s ease;   
     bottom: 100%;     
@@ -326,7 +363,7 @@ a:hover {
 
 .widget-lastest-item .small-title {
     font-family: "RobotoCondensed";
-    font-size: 1.25em;
+    font-size: 1em;
     font-weight: bold;
     text-align: center;
 }
@@ -348,7 +385,7 @@ a:hover {
 }
 
 .info-wrapper button {
-    font-size: 1.25em;
+    font-size: 1em;
 }
 
 .info-wrapper span:not(.more){
@@ -381,7 +418,7 @@ a:hover {
 
 .widget-lastest-item .more {
     text-align: center;
-    font-size: 1.2em;
+    font-size: .9em;
     width: 100%;
     white-space: nowrap;
     display: block;
@@ -473,7 +510,7 @@ a:hover {
 }
 
 #right-footer-menu span {
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 .nav-foot-menu {
@@ -544,4 +581,87 @@ a:hover {
   /* Pop */
   #popover-positioned-bottom {
       z-index: 100
+  }
+
+
+
+  /* VIEWS  */
+
+  .body-content {
+      width: 100%;
+      min-height: 100%;
+      position: relative;
+  }
+
+  /* Side Widget */
+  .side-widget {
+      width: 25%;
+      min-width: 250px;
+      max-width: 300px;
+      height: 100%;
+      z-index: 100;
+      background: white;
+      position: fixed;
+      right: 0;
+      top: 1px;
+      border-style: none;
+  }
+
+  .user-chat-info {
+      width: 100%;
+  }
+
+  .user-chat-info .user-ava {
+      height: 40px;
+      width: 40px;
+      border-radius: 20px;
+      background: white;
+  }
+
+  /* Project Info */
+  .project-info {
+    min-height: 800px;      
+  }
+  
+  .project-banner {
+      width: 100%;
+      min-height: 15vw;
+      max-height: 25vw;
+      text-align: center;
+      background: black;
+      overflow: hidden;
+      border: inset 1px black;
+      position: relative;
+  }
+  .project-banner::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,.2);
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+
+  .project-banner img {
+      position: relative;
+      width: 100%;
+  }
+        /* Project Info Widget */
+  .project-mini-panel {
+      width: 20%;
+      min-width: 200px;
+      max-width: 250px;
+      position: absolute;
+      height: auto;
+      background: rgba(255,255,255,.7);
+      right: 15px;
+  }
+  .project-mini-panel .panel-header {
+    background: rgba(0,0,0,.7);
+    width: 100%;
+    height: auto;
+    color: white;
+    padding: .25em;
+    font-size: 1.1em;
   }

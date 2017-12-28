@@ -1,5 +1,5 @@
 import React from 'react'
-import WidgetLatestPJ from '../widgets/latestPJ'
+import WidgetLatestPJ from '../widgets/LatestPJ'
 
 
 export default class MainPage extends React.Component {
