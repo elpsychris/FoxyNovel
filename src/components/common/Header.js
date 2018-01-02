@@ -35,14 +35,18 @@ export default class Header extends Component {
         return ([
             <div id="header">
                 <div id="header-wrapper">
-                    <div id="logo-wrapper">
+                    <div className="left-header">
+                        <div id="logo-wrapper">
                         <div id="logo"/>
-                        <span><Link to=''>Foxy.io</Link></span>
+                            <span><Link to=''>Foxy.io</Link></span>
+                        </div>
+                        {MENU_DOM}
                     </div>
-                    {MENU_DOM}
-                    <SearchBar />
-                    <div className="auth-wrapper">
-                            {isAuthenticated?SETTING_DOM:AUTH_DOM}
+                    <div className="right-header">
+                        <SearchBar />
+                        <div className="auth-wrapper">
+                                {isAuthenticated?SETTING_DOM:AUTH_DOM}
+                        </div>
                     </div>
                 </div>
             </div>,

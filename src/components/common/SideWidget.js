@@ -56,30 +56,49 @@ const FRIENDLIST = [
 ]
 
 export default class SideWidget extends React.Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            isHidden: false
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+
+    }
+
+
     render() {
         return (
-            <div className="side-widget">
-                <div className="cur-user">
-                    {this.renderUserComp(TEST_GUESS_INFO)}
+            <div ref={el => this.sideWidget = el } className="side-widget">
+                <div className="cur-user" onClick={(e)=>this.onHide(e)}>
+                    {this.renderUserComp(TEST_GUESS_INFO, "cur-user")}
                     <div className="hide-chat"></div>
                 </div>
                 <div className="friend-list sub-widget">
                     <span>Friends</span>
                     {FRIENDLIST.map(friend => {
-                        return this.renderUserComp(friend)
+                        return this.renderUserComp(friend, friend.id)
                     })}
                 </div>
             </div>
         )
     }
 
-    renderUserComp(userInfo) {
+    renderUserComp(userInfo, key) {
         let userStatus = userInfo.status==1?"online":"offline"
         return (
-            <div className={"user-chat-info " + userStatus}>
+            <li key={key} className={"user-chat-info " + userStatus}>
                 <img className="user-ava" src={userInfo.ava}/>
                 <div className="user-name">{userInfo.username}</div>
-            </div>
+            </li>
         )
+    }
+
+
+    // Event handlers
+    onHide() {
+        this.sideWidget.style.right = "-300px";
     }
 }
