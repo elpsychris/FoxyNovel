@@ -65,17 +65,13 @@ export default class SideWidget extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-
+        
     }
 
 
     render() {
         return (
             <div ref={el => this.sideWidget = el } className="side-widget">
-                <div className="cur-user" onClick={(e)=>this.onHide(e)}>
-                    {this.renderUserComp(TEST_GUESS_INFO, "cur-user")}
-                    <div className="hide-chat"></div>
-                </div>
                 <div className="friend-list sub-widget">
                     <span>Friends</span>
                     {FRIENDLIST.map(friend => {
@@ -95,7 +91,6 @@ export default class SideWidget extends React.Component {
             </li>
         )
     }
-
 
     // Event handlers
     onHide() {
